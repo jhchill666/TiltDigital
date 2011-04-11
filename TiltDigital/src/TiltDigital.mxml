@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/halo"
+	xmlns:main="view.*"
+
+	minWidth="1024" minHeight="768"
+
+	preinitialize="preInitHandler()"
+	applicationComplete="initComplete()"
+	viewSourceURL="srcview/index.html"
+	usePreloader="false"
+	skinClass="skins.TiltDigitalSkin">
+    
+    
+    <layout>
+    	<VerticalLayout/>
+    </layout>
+    
+    
+    <fx:Script>
+        <![CDATA[
+    		import mx.managers.BrowserManager;
+    		import com.tiltdigital.log.loggers.*;
+    		import com.tiltdigital.log.Logger;
+    		import com.tiltdigital.swiz.beans.localisation.LocaleBeans;
+    		import com.tiltdigital.swiz.beans.loader.LoaderBeans;
+    		import com.tiltdigital.swiz.beans.audio.AudioBeans;
+    		import org.swizframework.Swiz;
+            
+            /**
+             * Initialise the application
+             */
+            private function preInitHandler() : void
+            {
+                Swiz.setStrict( true ).loadBeans( [ MainBeans, AudioBeans, LoaderBeans, LocaleBeans ] );
+            }
+            
+  			
+  			/**
+         	 * Application instantiation complete handler
+         	 */
+		    private function initComplete() : void
+		    {
+//		    	Logger.registerLogger( new SOSLogger() );
+		    	Logger.registerLogger( new DeMonsterLogger() );
+		    	
+		    	BrowserManager.getInstance().setTitle( "Home" );
+		    }
+		 
+        ]]>
+    </fx:Script>
+
+	<main:MainView id="mainView"/>
+    
+</Application>

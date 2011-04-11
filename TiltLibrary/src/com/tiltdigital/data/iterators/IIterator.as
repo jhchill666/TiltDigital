@@ -1,0 +1,2 @@
+package com.tiltdigital.data.iterators {
+	/**	 * @author Jamie.Hill	 */	public interface IIterator 	{		/**		 * @return returns the next item in the collection structure		 */		function next () :*;				/**		 * @return true if there is a next item		 */		function hasNext () : Boolean;				/**         * Removes an element from the iterator         */        function remove () : void;	}}

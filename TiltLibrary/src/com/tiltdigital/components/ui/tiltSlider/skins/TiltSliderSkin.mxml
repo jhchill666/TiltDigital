@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin xmlns="http://ns.adobe.com/mxml/2009"
+      height="100" width="15">
+
+    <Metadata>
+        [HostComponent("flex.component.VSlider")]
+    </Metadata> 
+    
+    <Button id="track" left="2" right="2" top="0" bottom="0" 
+            skinZZ="com.tiltdigital.components.ui.tiltSlider.skins.TiltSliderTrackSkin" />
+    <Button id="thumb" horizontalCenter="0" width="21" height="15" top="-5" 
+            skinZZ="com.tiltdigital.components.ui.tiltSlider.skins.TiltSliderThumbSkin" />
+</Skin>

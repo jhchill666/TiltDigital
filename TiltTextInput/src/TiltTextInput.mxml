@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application 
+        xmlns="http://ns.adobe.com/mxml/2009" 
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns:mx="library://ns.adobe.com/flex/halo"
+        backgroundColor="0xf4f4f4" xmlns:local="*">
+        
+        <Style>
+            .textInput {
+                skinClass: ClassReference("TiltTextInputSkin");
+                focusColor: "0xa2d2ff";
+                color: "0x808080";
+                fontSize: "12";
+                selectionColor: "0xa2d2ff";
+            }
+        </Style>
+        
+        
+        <s:HGroup horizontalCenter="0" verticalCenter="0" gap="25" >
+            <local:TiltTextInput id="cf" styleName="textInput" />
+        </s:HGroup>
+
+</s:Application>

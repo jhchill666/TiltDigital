@@ -1,0 +1,1 @@
+package com.tiltdigital.swiz.beans.audio.model {	/**	 * @author Jamie	 */	public class AudioSettings 	{		public static var DEFAULT_PAN					: Number 	= 0;		public static var DEFAULT_VOLUME				: Number 	= 0.7;		public static var DEFAULT_MUTE					: Number 	= 1;		public static var MAX_CHANNELS					: Number 	= 32;	}}

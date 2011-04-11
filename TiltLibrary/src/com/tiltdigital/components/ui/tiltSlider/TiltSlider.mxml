@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Jamie Hill. www.tiltdigital.com. 2009
+    custom vertical slider in gumbo
+-->
+<Group xmlns="http://ns.adobe.com/mxml/2009">
+
+	<Script>
+	    <![CDATA[
+	        
+	        import mx.events.FlexEvent;
+	        
+	        //register function(value:Number):Number if transforming the value is needed
+	        //clients could also use an eventListener on oscSlider and write the value back to sliderValue.text
+	        public var transformValueCallback:Function; 
+	        
+	        [Bindable]
+	        public var headerLabelColor:uint = 0xffffff;
+	        
+	        private function sliderValueChanged( event:FlexEvent ) : void
+	        {
+	            var newValue:Number;
+	            if (transformValueCallback != null) {
+	                newValue = transformValueCallback((event.currentTarget).value);
+	                
+	            } else {
+	                newValue = oscSlider.value;
+	            }
+	            sliderValue.text = String(Math.round(newValue*100)/100);
+	        }
+	        ]]> 
+	</Script>
+
+    <!-- Background of the component -->
+    <Rect width="80" height="200" radiusX="10" radiusY="10">
+        <fill>
+            <LinearGradient rotation="90">
+            	<GradientEntry color="0x606060" alpha="1" ratio="0" /> 
+                <GradientEntry color="0x303030" alpha="1" ratio="1" /> 
+            </LinearGradient>
+        </fill>
+    </Rect>
+    
+    <!-- led display -->
+    <Rect width="50" height="20" top="35" horizontalCenter="0">
+    <stroke>
+        <SolidColorStroke weight="1" color="0xffffff" alpha="0.5"/>
+    </stroke>
+        <fill>
+            <LinearGradient rotation="90">
+            	<GradientEntry color="0xa0e020" alpha="1" ratio="0" /> 
+            	<GradientEntry color="0x70bb00" alpha="1" ratio="1" /> 
+        	</LinearGradient>
+        </fill>
+    </Rect>
+    
+    <!-- 
+    TextBox for simple Text. If more advanced TextLayout is needed, 
+    then TextGraphic or TextView have more options. Draws Slider Header 
+    -->
+    <TextBox id="sliderLabel" text="Slider Label" 
+        color="{headerLabelColor}"  
+        fontFamily="Verdana" 
+        fontSize="10"
+        textAlign="center" 
+        horizontalCenter="0"
+        top="15">
+    </TextBox>
+    
+    <!-- Display for (transformed value) -->
+    <TextBox id="sliderValue" text="value" 
+        color="0x000000"  
+        fontFamily="Verdana" 
+        fontSize="9"
+        textAlign="center" 
+        horizontalCenter="0"
+        top="42">
+    </TextBox>
+    
+    <!-- Group with the Slider -->
+    <Group id="sliderComposition" top="70" horizontalCenter="0" height="120">
+        <TextBox id="upperRangeLabel" text="max Label" 
+            color="0xffffff"  
+            fontFamily="Verdana" 
+            fontSize="10"
+            textAlign="center" 
+            horizontalCenter="0"
+            top="0">
+        </TextBox>
+        <!-- use a VSlider with custom skin -->
+        <VSlider id="oscSlider" value="500" horizontalCenter="0" verticalCenter="0"
+            valueCommit="sliderValueChanged(event);"
+            liveDragging="true"
+            top="10"
+            minimum="0" 
+            maximum="1000" 
+            width="15" height="100" stepSize="1"
+            skinZZ="com.tiltdigital.components.ui.tiltSlider.skins.TiltSliderSkin"
+            >
+        </VSlider>
+        
+        <TextBox id="lowerRangeLabel" text="min Label"
+            color="0xffffff"  
+            fontFamily="Verdana" 
+            fontSize="10"
+            textAlign="center" 
+            horizontalCenter="0"
+            bottom="0">
+        </TextBox>
+    </Group>
+</Group>

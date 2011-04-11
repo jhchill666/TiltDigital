@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BeanLoader
+	
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns="org.swizframework.util.*"
+	xmlns:model="com.tiltdigital.swiz.beans.localisation.model.*"
+	xmlns:controllers="com.tiltdigital.swiz.beans.localisation.controllers.*"
+	xmlns:delegate="com.tiltdigital.swiz.beans.localisation.delegate.*">
+	
+	<!-- models -->
+	<model:LocaleModel id="localeModel" />
+	
+	<!-- controllers -->
+	<controllers:LocaleController id="localeController" />
+	
+	<!-- delegates -->
+	<delegate:LoadLocaleDelegate id="localeDelegate" />
+	
+</BeanLoader>
+

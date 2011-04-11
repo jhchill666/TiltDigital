@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" >
+	<mx:HBox width="100%" verticalAlign="middle" horizontalAlign="center" >
+		
+	</mx:HBox>
+	
+	<mx:Text text="This is the main screen" /> 
+	
+	
+</mx:Canvas>

@@ -1,0 +1,11 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/halo";
+
+
+global
+{
+	fontFamily: "Courier New";
+	fontSize: 13;
+	baseColor: #592E2E;
+}

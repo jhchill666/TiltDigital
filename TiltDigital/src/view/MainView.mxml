@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Group 
+
+	xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/halo"
+    xmlns:preload="view.preloader.*" xmlns:site="view.site.*" xmlns:trans="view.site.transitions.*" >
+ 	
+ 	<!-- Set layout -->
+ 	<layout>
+ 		<HorizontalLayout/>
+ 	</layout>
+ 	
+ 	<fx:Script>
+	<![CDATA[
+	
+
+		]]>
+	</fx:Script>
+ 	
+ 	
+ 	<!-- Define the site view states. -->
+ 	<states>
+ 		<mx:State name="preloadState" />
+ 		<mx:State name="mainState" />
+ 	</states>
+ 	
+ 	<Group>
+		<layout><HorizontalLayout/></layout>
+		
+		<Button label="PreloadState" click="currentState='preloadState'"/>
+		<Button label="MainState" click="currentState='mainState'"/>
+
+	</Group>
+    
+    
+    <!-- Define view states' components -->
+	<preload:PreloaderView 	id="preloaderView" 	includeIn="preloadState" />
+	<site:SiteView 			id="siteView" 		includeIn="mainState" />
+	
+	<trans:TransitionManager id="transitionManager" />
+		
+</Group>

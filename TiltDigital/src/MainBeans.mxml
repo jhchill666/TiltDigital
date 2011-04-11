@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BeanLoader 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns="org.swizframework.util.*"
+	xmlns:model="model.*">
+	
+	<!-- Models -->
+	<model:ApplicationViewModel id="appViewModel"/>
+	<model:ApplicationSettingsModel id="appSettingsModel"/>
+	
+</BeanLoader>

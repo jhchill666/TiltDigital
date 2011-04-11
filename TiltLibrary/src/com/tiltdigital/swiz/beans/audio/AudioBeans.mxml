@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BeanLoader
+	
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns="org.swizframework.util.*"
+	xmlns:controllers="com.tiltdigital.swiz.beans.audio.controllers.*"
+	xmlns:model="com.tiltdigital.swiz.beans.audio.model.*">
+	
+	<controllers:AudioMixer id="audioMixer" />
+	<model:AudioModel id="audioModel" />
+	
+</BeanLoader>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<mx:RichTextEditor xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*" minWidth="220" minHeight="200" width="325" height="300">
+
+	    <mx:ControlBar> 
+
+        <!--- @private -->
+        <mx:ToolBar id="toolbar" width="100%" horizontalGap="7">
+            
+            <mx:ComboBox id="fontFamilyCombo" editable="true"
+                creationComplete="getTextStyles();lastCaretIndex = -1;"
+                dataProvider = "{fontFamilyArray}"
+                close="setTextStyles('font');"
+                enter="setTextStyles('font');"/>
+
+            <mx:ComboBox id="fontSizeCombo" editable="true"
+                paddingLeft="2" paddingRight="2"
+                dataProvider = "{fontSizeArray}"
+                close="setTextStyles('size');"
+                enter="setTextStyles('size');"/>
+                     
+            <mx:HBox id="toolBar2" horizontalGap="0">
+
+                <mx:Button id="boldButton" width="20" toggle="true"
+                           icon="@Embed('assets/icon_style_bold.png')"
+                           click="setTextStyles('bold', event.currentTarget.selected);" /> 
+                
+                <mx:Button id="italicButton" width="20" toggle="true"
+                           icon="@Embed('assets/icon_style_italic.png')"
+                           click="setTextStyles('italic', event.currentTarget.selected);" /> 
+                
+                <mx:Button id="underlineButton" width="20" toggle="true"
+                           icon="@Embed('assets/icon_style_underline.png')"
+                           click="setTextStyles('underline', event.currentTarget.selected);" /> 
+
+            </mx:HBox>
+        
+            <mx:ColorPicker id="colorPicker" width="22" height="22"
+                        close="setTextStyles('color');"/>
+
+            <mx:VRule height="{alignButtons.height}"/>
+
+            <mx:ToggleButtonBar id="alignButtons" buttonWidth="20"
+                            itemClick="setTextStyles('align', ToggleButtonBar(event.currentTarget).dataProvider.getItemAt(ToggleButtonBar(event.currentTarget).selectedIndex).action); " >
+                <mx:dataProvider>
+                    <mx:Array> 
+                        <mx:Object icon="@Embed('assets/icon_align_left.png')" action="left"/>
+                        <mx:Object icon="@Embed('assets/icon_align_center.png')" action="center"/>
+                        <mx:Object icon="@Embed('assets/icon_align_right.png')" action="right"/>
+                        <mx:Object icon="@Embed('assets/icon_align_justify.png')" action="justify"/>
+                    </mx:Array>
+                </mx:dataProvider>
+            </mx:ToggleButtonBar>
+
+            <mx:Button id="bulletButton" width="20" toggle="true"
+                   icon="@Embed('assets/icon_bullet.png')"
+                   click="setTextStyles('bullet', event.currentTarget.selected);" /> 
+
+            <mx:VRule height="{linkTextInput.height}"/>
+
+            <mx:TextInput id="linkTextInput" width="140"
+                focusOut="if (linkTextCommitted) 
+                          { trace('already committed'); linkTextCommitted = false; } 
+                          else 
+                          { trace('not committed'); setTextStyles('url', linkTextInput.text); linkTextInput.text=defaultLinkProtocol;}"
+                enter="setTextStyles('url', linkTextInput.text); linkTextInput.text = defaultLinkProtocol; linkTextCommitted = true;"/>
+
+        </mx:ToolBar>
+
+    </mx:ControlBar> 
+    
+	<!--- @private -->
+    <mx:TextArea id="textArea"/>
+    
+</mx:RichTextEditor>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- using halo Application for the gradientBackground -->
+<mx:Application xmlns="http://ns.adobe.com/mxml/2009"
+        xmlns:mx="library:adobe/flex/halo"
+        xmlns:tilt="com.tiltdigital.components.ui.tiltSlider.*"
+        layout="absolute" 
+        frameRate="40"
+        backgroundGradientColors="[#f4f4f4,#e0e0e0]" xmlns:core="flex.core.*"
+        creationComplete="init()">
+    
+    <Script>
+        <![CDATA[
+            
+            private function init():void {
+                //setting properties on sliders. TODO: Should be exposed to mxml too.
+                  celsius.oscSlider.maximum = 40;
+                celsius.oscSlider.minimum = -40;
+                celsius.sliderLabel.text = "°C to °F";
+                celsius.upperRangeLabel.text = "40 °C";
+                celsius.lowerRangeLabel.text = "-40 °C";
+                celsius.transformValueCallback = celsiusToFahrenheit;
+                
+                degToRad.oscSlider.maximum = 360;
+                degToRad.oscSlider.minimum = 0;
+                degToRad.oscSlider.stepSize = 45;
+                degToRad.sliderLabel.text = "deg -> rad";
+                degToRad.upperRangeLabel.text = "360 Deg";
+                degToRad.lowerRangeLabel.text = "0 Deg";
+                degToRad.transformValueCallback = degToRadians;
+                
+                freq.oscSlider.maximum = 440;
+                freq.oscSlider.minimum = 0;
+                freq.sliderLabel.text = "Freq.";
+                freq.upperRangeLabel.text = "440 Hz";
+                freq.lowerRangeLabel.text = "0 Hz";
+            }
+            //convertors
+            private function transformValue(value:Number):Number {
+                return Math.log (value);
+            }
+            
+            private function celsiusToFahrenheit(value:Number):Number {
+                return value * 9/5 + 32;
+            }
+            
+            private function degToRadians(value:Number):Number {
+                return value/180*Math.PI;
+            }
+        ]]>
+    </Script>
+    <Group horizontalCenter="0" verticalCenter="0">
+        <Rect width="540" height="260" radiusX="10" radiusY="10" >
+            <fill>
+                <LinearGradient rotation="90">
+                       <GradientEntry color="0x808080" alpha="1" ratio="0" /> 
+                       <GradientEntry color="0x606060" alpha="1" ratio="1" /> 
+                </LinearGradient>
+            </fill>
+        </Rect>
+    </Group>
+    <Group id="faderContainer" horizontalCenter="0" verticalCenter="0" >
+        <tilt:TiltSlider id="celsius" left="0"/>
+        <tilt:TiltSlider id="degToRad" left="90" />
+        <tilt:TiltSlider id="freq" left="180" />
+        <TextGraphic 
+            color="0xe0e0e0" 
+               fontSize="10"
+               id="descriptionText" 
+               paddingLeft="10" 
+               paddingRight="10" 
+               left="270"
+               width="230" 
+               fontFamily="Verdana" 
+               whiteSpaceCollapse="collapse">
+            <content>
+                <p fontWeight="bold" fontSize="12" color="0xffffff" >Testing custom components in Gumbo</p>
+                <p marginTop="4">A gumbo VSlider is skinned and embedded in a custom component.</p>
+                <p marginTop="4">The custom component adds additional gui elements and behaviour.</p>
+                <p marginTop="4">Shown are 3 custom sliders with different settings and transform-functions</p>
+            </content>
+        </TextGraphic>
+    </Group>
+</mx:Application>

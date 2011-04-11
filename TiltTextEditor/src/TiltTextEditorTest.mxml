@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://blog.flexexamples.com/2007/11/21/customizing-the-flex-richtexteditor-controls-title-style/ -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+        layout="vertical"
+        verticalAlign="middle"
+        backgroundColor="white" viewSourceURL="srcview/index.html" xmlns:local="*">
+
+    <mx:Style>
+        .richTextEditorTitleStyle
+        {
+            color: haloBlue;
+            fontSize: 24;
+            fontWeight: normal;
+            textAlign: center;
+        }
+    </mx:Style>
+
+    <local:TiltTextEditor id="richTextEditor"
+            title="Rich Text Editor"
+            titleStyleName="richTextEditorTitleStyle"
+            showToolTips="true"
+            />
+
+</mx:Application>

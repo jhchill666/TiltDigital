@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/halo">
+	<s:layout><s:BasicLayout/></s:layout>
+	
+	
+	<fx:Declarations>    
+        <s:DropShadowFilter id="galleryItemShadow"
+            color="0x0000FF"
+            distance="5"
+            angle="315"/>
+    </fx:Declarations>
+
+
+
+	<s:Graphic>
+
+    	<s:Group id="bg" maskType="alpha" filters="{[ galleryItemShadow ]}"">
+    	
+    		<s:mask>
+	            <s:Rect x="4" y="4" width="192" height="192">
+				   <s:fill>
+				      <s:SolidColor color="#FF0000" />
+				   </s:fill>
+				</s:Rect>
+		    </s:mask>
+
+
+			<s:Rect width="200" height="200">
+			   <s:fill>
+			      <s:SolidColor color="#FF0000" />
+			   </s:fill>
+			   <s:stroke>
+			      <s:SolidColorStroke weight="10" color="#0000FF" alpha="0.5" />
+			   </s:stroke>
+			</s:Rect>
+			
+		</s:Group>
+		
+	</s:Graphic>
+	
+</s:Group>

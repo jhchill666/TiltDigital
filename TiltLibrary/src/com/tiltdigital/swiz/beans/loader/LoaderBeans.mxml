@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BeanLoader
+	
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns="org.swizframework.util.*"
+	xmlns:model="com.tiltdigital.swiz.beans.loader.model.*"
+	xmlns:controllers="com.tiltdigital.swiz.beans.loader.controllers.*"
+	xmlns:delegate="com.tiltdigital.swiz.beans.loader.delegate.*">
+	
+	<!-- models -->
+	<model:LoaderModel id="loaderModel" />
+	
+	<!-- controllers -->
+	<controllers:LoaderController id="loaderController" />
+	
+	<!-- delegates -->
+	<delegate:FileSizeDelegate id="fileSizeDelegate" />
+	<delegate:LoaderQueueDelegate id="loaderQueueDelegate" />
+	
+</BeanLoader>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+    xmlns:mx="http://www.adobe.com/2006/mxml"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:tilt="com.tiltdigital.components.text.textInput.*"
+    xmlns:local="*"
+    layout="horizontal" 
+    horizontalAlign="center" 
+    verticalAlign="center" 
+    viewSourceURL="src/EmbeddingFonts/index.html"
+>
+
+    <mx:Style>
+        @font-face 
+        {
+            font-family: Gotham;
+            src: url("../assets/Gotham-Medium.ttf");
+            unicode-range:
+                U+0020-U+0040, /* Punctuation, Numbers */
+                U+0041-U+005A, /* Upper-Case A-Z */
+                U+005B-U+0060, /* Punctuation and Symbols */
+                U+0061-U+007A, /* Lower-Case a-z */
+                U+007B-U+007E; /* Punctuation and Symbols */
+        }
+
+        .MyTextStyle 
+        { 
+            font-family: Gotham; 
+            font-size: 80pt;    
+        }
+        
+        .textInput {
+            skinClass: ClassReference("TiltTextInputSkin");
+            focusColor: "0xa2d2ff";
+            color: "0x808080";
+            fontSize: "12";
+            selectionColor: "0xa2d2ff";
+        }
+    </mx:Style>
+
+    <s:HGroup horizontalCenter="0" verticalCenter="0" gap="25" >
+        <tilt:TiltTextInput id="cf" text="Customized" styleName="textInput" />
+    </s:HGroup>
+    
+</mx:Application>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+  <includeClasses>
+    <classEntry path="com.tiltdigital.data.HashMap"/>
+    <classEntry path="com.tiltdigital.data.Queue"/>
+    <classEntry path="com.tiltdigital.data.collections.ICollection"/>
+    <classEntry path="com.tiltdigital.data.iterators.ArrayIterator"/>
+    <classEntry path="com.tiltdigital.data.iterators.IIterator"/>
+    <classEntry path="com.tiltdigital.data.iterators.IListIterator"/>
+    <classEntry path="com.tiltdigital.data.iterators.ObjectIterator"/>
+    <classEntry path="com.tiltdigital.data.lists.List"/>
+    <classEntry path="com.tiltdigital.log.ILogger"/>
+    <classEntry path="com.tiltdigital.log.LogLevel"/>
+    <classEntry path="com.tiltdigital.log.LogVO"/>
+    <classEntry path="com.tiltdigital.log.Logger"/>
+    <classEntry path="com.tiltdigital.log.LoggerBase"/>
+    <classEntry path="com.tiltdigital.log.event.LoggerEvent"/>
+    <classEntry path="com.tiltdigital.log.loggers.FireBugLogger"/>
+    <classEntry path="com.tiltdigital.log.loggers.SOSLogger"/>
+    <classEntry path="com.tiltdigital.log.loggers.TraceLogger"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.AudioBeans"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.AudioMixer"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.AdjustmentBase"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.IAdjustment"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.LeftPeak"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.Mute"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.Pan"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.RightPeak"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.controllers.adjustments.Volume"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.model.AudioCache"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.model.AudioChannels"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.model.AudioModel"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.model.AudioSettings"/>
+    <classEntry path="com.tiltdigital.swiz.beans.audio.vo.AudioVO"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.LoaderBeans"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.controllers.LoaderController"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.delegate.FileSizeDelegate"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.delegate.LoaderQueueDelegate"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.event.LoaderEvent"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.event.LoaderProgressEvent"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.LoaderConfig"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.LoaderModel"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.LoaderQueue"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.LoaderStats"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.VirtualCache"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.BinaryDataLoader"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.DataLoader"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.DisplayObjectLoader"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.FontLoader"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.SoundLoader"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.ILoader"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.LoaderBase"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.model.loaders.SwfByteArray"/>
+    <classEntry path="com.tiltdigital.swiz.beans.loader.vo.LoaderVO"/>
+    <classEntry path="com.tiltdigital.swiz.beans.localisation.LocaleBeans"/>
+    <classEntry path="com.tiltdigital.swiz.beans.localisation.controllers.LocaleController"/>
+    <classEntry path="com.tiltdigital.swiz.beans.localisation.delegate.LoadLocaleDelegate"/>
+    <classEntry path="com.tiltdigital.swiz.beans.localisation.event.LocaleEvent"/>
+    <classEntry path="com.tiltdigital.swiz.beans.localisation.model.Locale"/>
+    <classEntry path="com.tiltdigital.swiz.beans.localisation.model.LocaleModel"/>
+    <classEntry path="com.tiltdigital.tools.MathsTools"/>
+    <classEntry path="com.tiltdigital.tools.StringTools"/>
+    <classEntry path="com.tiltdigital.tools.SharedObjectTools"/>
+    <classEntry path="com.tiltdigital.log.loggers.DeMonsterLogger"/>
+    <classEntry path="nl.demonsters.debugger.MonsterDebugger"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
